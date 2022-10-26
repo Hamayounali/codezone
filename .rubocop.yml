@@ -58,3 +58,5 @@ Style/HashTransformValues:
   Enabled: false
 Style/OpenStructUse:
   Enabled: false
+Layout/EndOfLine:
+  EnforcedStyle: crlf
