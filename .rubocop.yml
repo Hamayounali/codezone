@@ -16,7 +16,7 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  IgnoredMethods: ['describe']
+  AllowedPatterns: ['describe']
   Max: 30
 Metrics/CyclomaticComplexity:
   Enabled: false
@@ -60,3 +60,5 @@ Style/OpenStructUse:
   Enabled: false
 Layout/EndOfLine:
   EnforcedStyle: lf
+Layout/EndOfLine:
+   Enabled: False
