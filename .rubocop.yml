@@ -59,4 +59,4 @@ Style/HashTransformValues:
 Style/OpenStructUse:
   Enabled: false
 Layout/EndOfLine:
-  EnforcedStyle: crlf
+  EnforcedStyle: lf
