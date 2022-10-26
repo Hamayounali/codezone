@@ -1,24 +1,39 @@
-# README
+# Codezone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is developed by Rails on Ruby, it is used to discuese and comment on any programming article.
 
-Things you may want to cover:
+## Getting Started 🙌
 
-* Ruby version
+To get a local copy up and running follow these simple example steps.
 
-* System dependencies
+### Setup
 
-* Configuration
+- Simply clone the project: https://github.com/Hamayounali/codezone.git
 
-* Database creation
 
-* Database initialization
+👤 **Hamayoun Ali**
 
-* How to run the test suite
+- GitHub: [@Hamayounali](https://github.com/Hamayounali)
+- Twitter: [@hamayounAli6](https://twitter.com/hamayounAli6)
+- LinkedIn: [Humayoon Ali](https://www.linkedin.com/in/humayoon-ali-663ba2239)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
