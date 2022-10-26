@@ -1,6 +1,9 @@
 AllCops:
   NewCops: enable
   Exclude:
+    - "db/**/*"
+    - "bin/*" 
+    - "config/**/*"
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
@@ -10,19 +13,20 @@ AllCops:
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
-  Max: 49
+  Include:
+    - "app/controllers/*"
+    - "app/models/*"
+  Max: 20
 Metrics/AbcSize:
+  Include:
+    - "app/controllers/*"
+    - "app/models/*"
   Max: 50
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  AllowedPatterns: ['describe']
+  IgnoredMethods: ['describe']
   Max: 30
-Metrics/CyclomaticComplexity:
-  Enabled: false
-Metrics/ParameterLists:
-  Enabled: false
-
 
 Style/Documentation:
   Enabled: false
@@ -48,18 +52,11 @@ Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
   Enabled: false
-Lint/UselessAssignment:
-  Enabled: false
 Style/HashEachMethods:
   Enabled: false
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-Style/OpenStructUse:
-  Enabled: false
-Layout/EndOfLine:
-  EnforcedStyle: lf
-Layout/EndOfLine:
-   Enabled: False
-   
+Style/EndOfLine:
+  EnforcedStyle: crlf
