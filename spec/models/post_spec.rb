@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   before(:all) do
     @user = User.create(
-      name: 'TestName', photo: 'https://test.com/test.png',
-      bio: 'This is some test bio data', posts_counter: 0
+      name: 'Ahmad', photo: 'https://textcls.com/test.png',
+      bio: 'test string', posts_counter: 0
     )
   end
 
   subject do
     Post.new(
-      title: 'test', text: 'Some testing text', comments_counter: 0,
-      likes_counter: 0, author_id: user.id
+      title: 'About', text: 'About me', comments_counter: 1,
+      likes_counter: 0, author_id: @user.id
     )
   end
 
