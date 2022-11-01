@@ -14,41 +14,42 @@
  *= require_self
  */
 .photo {
-   min-height: 100px;
-   background-color: rgb(243, 239, 239);
-   border: 1px solid rgb(45, 45, 45);
+  min-height: 100px;
+  background-color: rgb(243, 239, 239);
+  border: 1px solid rgb(45, 45, 45);
 }
 
 .users {
-   text-align: center;
-   padding: 8px;
+  text-align: center;
+  padding: 8px;
 }
 
 .user_details {
-   min-height: 100px;
-   text-align: left;
-   background-color: rgb(243, 239, 239);
-   border: 1px solid rgb(45, 45, 45);
-   padding-right: 10px;
-   margin-right: -10px;
+  min-height: 100px;
+  text-align: left;
+  background-color: rgb(243, 239, 239);
+  border: 1px solid rgb(45, 45, 45);
+  padding-right: 10px;
+  margin-right: -10px;
 }
 
 .post_count {
-   float: right;
+  float: right;
 }
 
 .bio_row {
-   padding: 8px;
+  padding: 8px;
 }
+
 .bio {
-   min-height: 100px;
-   margin: auto;
-   vertical-align: middle;
-   text-align: left;
-   background-color: rgb(243, 239, 239);
-   border: 1px solid rgb(45, 45, 45);
+  min-height: 100px;
+  margin: auto;
+  vertical-align: middle;
+  text-align: left;
+  background-color: rgb(243, 239, 239);
+  border: 1px solid rgb(45, 45, 45);
 }
 
 .see_all {
-text-align: center;
+  text-align: center;
 }
