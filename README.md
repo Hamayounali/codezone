@@ -1,6 +1,8 @@
 # Codezone
 
 This application is developed by Rails on Ruby, it is used to discuese and comment on any programming article.
+## User Interface
+![image](https://user-images.githubusercontent.com/22744775/199899352-c2c89f34-e831-4230-bd18-eb529095d027.png)
 
 ## Getting Started 🙌
 
