@@ -21,15 +21,14 @@
 .logo {
   color: orange;
   padding-top: 10px;
-
 }
+
 .userImage {
   text-align: center;
 }
 
 .bio {
   background-color: rgb(230, 227, 227);
-  border: 0px;
 }
 
 .seeAll {
