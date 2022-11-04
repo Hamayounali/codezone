@@ -1,0 +1,39 @@
+<div class="container">
+
+<h3 class="logo"> Codezone
+<span class="homeButton"> <a href="/"><button type="button" class="btn btn-outline-dark button">Home</button> </a></span></h3>
+  <div class="mt-2 p-2 bg-primary text-white rounded" >
+    <div class="row"> 
+      <div class="col-sm-3 userImage"> 
+         <img width="140px" src=<%=@user.photo %> alt=<%= @user.name %> />
+      </div>
+      <div class="col-sm-9">
+      <br>
+      <br>
+        <h3><%= @user.name %> </h3> 
+        <br>
+        <div class="container commentsLikes">
+          Total Posts: <b>(<%= @user.posts_counter %>)</b>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  <% @user.posts.each do |post| %>
+    <div class="mt-4 p-4 bg-light text-black rounded" >
+      <h4> <%= post.title %> <span class="author">(by: <%= post.user.name %>) </span></h4> 
+       <%= post.text %>
+       <a href="/users/<%=@user.id %>/posts/<%=post.id %>"> <button type="button" class="btn btn-link">Read More</button></a>
+       <div class="commentsLikes">
+        Comments: ( <%= post.comments_counter %> ) Likes: ( <%= post.likes_counter %> )
+       </div>
+    <hr>
+    <h5>Comments:</h5>
+      <% post.comments.each do |comment| %>
+        <p>
+          <b><%= post.user.name %> : </b> <%= comment.text %>
+        </p>
+      <% end %>
+     </div>
+    <% end %> 
+</div>

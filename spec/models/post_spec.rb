@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   before(:all) do
     @user = User.create(
-      name: 'Ahmad', photo: 'https://textcls.com/test.png',
-      bio: 'test string', posts_counter: 0
+      name: 'Esmat', photo: 'https://textcls.com/test.png',
+      bio: 'A full stack web developer', posts_counter: 0
     )
   end
 
