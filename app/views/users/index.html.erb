@@ -1,5 +1,8 @@
 <div class="container">
-<h3 class="logo"> Codezone</h3>
+<h3 class="logo"> Codezone
+<span class="homeButton"> <%= link_to "New post", new_post_path %> </span>
+</h3>
+
   <% @users.each_with_index do |user, index| %>
   <a href="/users/<%=user.id %>">
   <div class="mt-2 p-1 bg-primary text-white rounded" >

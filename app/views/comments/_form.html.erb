@@ -1,0 +1,13 @@
+
+  <div class="container">
+    <%= form_with(model: comment, class: "contents") do |form| %>
+    <%= form.hidden_field :post_id %>
+
+    <%= form.label "Add comment" %>
+    <%= form.text_field :text, class:"form-control", placeholder:"Enter your comment", required:true %>
+
+    <br>
+    <%= form.submit class:"btn btn-primary" %>
+
+    <% end %>
+  </div>
