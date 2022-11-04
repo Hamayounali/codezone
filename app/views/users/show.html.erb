@@ -1,54 +1,49 @@
-<div class="container"> 
-  <div class="row users">
-    <div class="col-sm-3 photo">
-        <h2>  Photo  </h2>
-    </div>
-    <div class="col-sm-9">
-        <div class=user_details>
-            <h2> User Name </h2>
-            <p class="post_count">Numer of Posts x</p>
+<div class="container">
+
+<h3 class="logo"> Codezone 
+<span class="homeButton"> <a href="/"><button type="button" class="btn btn-outline-dark button">Home</button> </a></span></h3>
+
+  <div class="mt-2 p-2 bg-primary text-white rounded" >
+    <div class="row"> 
+      <div class="col-sm-3 userImage"> 
+         <img width="140px" src=<%=@user.photo %> alt=<%= @user.name %> />
+      </div>
+      <div class="col-sm-9">
+      <br>
+      <br>
+        <h3><%= @user.name %> </h3> 
+        <br>
+        <div class="container commentsLikes">
+          Total Posts: <b>(<%= @user.posts_counter %>)</b>
         </div>
+      </div>
+      </div>
     </div>
+
+  <div class="mt-2 p-3 bg-light text-black rounded" >
+    <h3>Bio</h3>
+    <p>
+      <%= @user.bio %>
+    </p>
   </div>
-    <br>
-  <div class="row bio_row">
-    <div class="bio">
-    <h2> Bio </h2>
-        <p>
-        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
-        To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
-        Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
+  <br>
+  <h4> Recent Posts: </h4>
+  <div class="mt-2 p-3 bg-light text-black rounded" >
+  <%@posts.each_with_index do |post, index| %>
+      <h5><%= post.title %> </h5>
+      <p>
+        Post Content: <%= post.text %>
+      </p>
+  <hr>
+  <% end %>
+  </div>
 
-        </p>
-    </div>
-  <div>
-<br>
-  <div class="row">
-    <div class="bio">
-    <h2> Post # 1 </h2>
-        <p>
-        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
-        To make your document look professionally produced, Word provides header, footer, 
+<div class="seeAll">
+  <a href="/users/<%=@user.id%>/posts">
+    <button type="button" class="btn btn-primary">See All Posts</button>
+  </a>
+</div>
 
-        <p class="post_count">comment x by y</p>
-        </p>
-    </div>
-  <div>
-<br>
-    <div class="row">
-    <div class="bio">
-    <h2> Post # 2 </h2>
-        <p>
-        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
-        To make your document look professionally produced, Word provides header, footer, 
 
-        <p class="post_count">comment x by y</p>
-        </p>
-    </div>
-  <div>
-    <br>
-    <div class="container see_all">
-    <button type="button" class="btn btn-outline-secondary">See All Posts</button>
-    </div>
-
+  <br>
 </div>

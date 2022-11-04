@@ -13,43 +13,43 @@
  *= require_tree .
  *= require_self
  */
-.photo {
-  min-height: 100px;
-  background-color: rgb(243, 239, 239);
-  border: 1px solid rgb(45, 45, 45);
+.commentsLikes {
+  text-align: right;
+  font-size: 15px;
 }
 
-.users {
+.logo {
+  color: orange;
+  padding-top: 10px;
+
+}
+.userImage {
   text-align: center;
-  padding: 8px;
-}
-
-.user_details {
-  min-height: 100px;
-  text-align: left;
-  background-color: rgb(243, 239, 239);
-  border: 1px solid rgb(45, 45, 45);
-  padding-right: 10px;
-  margin-right: -10px;
-}
-
-.post_count {
-  float: right;
-}
-
-.bio_row {
-  padding: 8px;
 }
 
 .bio {
-  min-height: 100px;
-  margin: auto;
-  vertical-align: middle;
-  text-align: left;
-  background-color: rgb(243, 239, 239);
-  border: 1px solid rgb(45, 45, 45);
+  background-color: rgb(230, 227, 227);
+  border: 0px;
 }
 
-.see_all {
+.seeAll {
   text-align: center;
+}
+
+.author {
+  font-size: 14px;
+}
+
+.homeButton {
+  font-size: 12px;
+  padding: 10px;
+}
+
+.button {
+  margin-top: -10px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
 }
