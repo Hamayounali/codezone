@@ -1,11 +1,14 @@
 <div class="container">
 <h3 class="logo"> Codezone
-<span class="homeButton"> <a href="/"><button type="button" class="btn btn-outline-dark button">Home</button> </a></span></h3>
+<span class="homeButton"> <a href="/"><button type="button" class="btn btn-outline-dark button">Home</button> </a></span>
+<span class="homeButton"> <%= link_to "New post", new_post_path %> </span>
+</h3>
 <div class="mt-4 p-4 bg-light text-black rounded" >
 
   <h4> <%= @post.title %> <span class="author">(by: <%= @post.user.name %>) </span></h4> 
   <div class="container commentsLikes">
     Comments ( <%= @post.comments_counter %> ) Likes ( <%= @post.likes.count %> )
+    <%= render "likes/form", like: @like%>
   </div>
   <br>
   <p>
@@ -19,4 +22,5 @@
       <b><%= @post.user.name %> </b> : <%= comment.text %>
     </p>
     <%end %>
+    <%= render "comments/form", comment: @comment%>
 </div>

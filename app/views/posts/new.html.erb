@@ -1,0 +1,23 @@
+<div class="container"> 
+<h3 class="logo"> Codezone 
+<span class="homeButton"> <a href="/"><button type="button" class="btn btn-outline-dark button">Home</button> </a></span>
+<span class="homeButton"> <%= link_to "New post", new_post_path %> </span>
+</h3>
+<hr>
+  <%= form_with(model: @post) do |form| %>
+    <div>
+      <%= form.label :title, class:"form-label" %>
+      <%= form.text_field :title, class:"form-control", placeholder:"Enter post title" %>
+      
+    </div>
+
+    <div>
+      <%= form.label :text, class:"form-label" %>
+      <%= form.text_area :text, class:"form-control", rows:"5" %>
+    </div>
+    <br>
+    <div>
+      <%= form.submit class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
