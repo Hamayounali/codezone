@@ -2,24 +2,38 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
-    it 'returns http success' do
-      get '/users/index'
-      expect(response).to have_http_status(:success)
+    context 'when the page is loaded' do
+      before do
+        get '/users'
+      end
+      it 'returns a 200 status code' do
+        expect(response).to have_http_status(200)
+      end
+      it 'renders the index template' do
+        expect(response).to render_template('index')
+        expect(response.body).to render_template('index')
+      end
+      it 'includes number of posts' do
+        expect(response.body).to include('Total Posts:')
+      end
     end
+  end
 
-    it 'should render correct template' do
-      get '/users/:id/posts'
-      expect(response).to render_template(:index)
-    end
-
-    it 'should render correct template' do
-      get '/users/:id/posts/:id'
-      expect(response).to render_template(:show)
-    end
-
-    it 'body should includes correct placeholder text' do
-      get '/users/:id/posts'
-      expect(response.body).to include('User Name')
+  describe 'GET /show' do
+    context 'when the page is loaded' do
+      before do
+        get '/users/17'
+      end
+      it 'returns a 200 status code' do
+        expect(response).to have_http_status(200)
+      end
+      it 'renders the show template' do
+        expect(response).to render_template('show')
+        expect(response.body).to render_template('show')
+      end
+      it 'includes see all posts' do
+        expect(response.body).to include('See All Posts')
+      end
     end
   end
 end
