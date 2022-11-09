@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
-      get '/posts/index'
+      get '/users/1/posts'
       expect(response).to have_http_status(:success)
     end
 
@@ -13,13 +13,13 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should render correct template' do
-      get '/users/:id'
+      get '/users/1'
       expect(response).to render_template(:show)
     end
 
     it 'body should includes correct placeholder text' do
       get '/'
-      expect(response.body).to include('User Name')
+      expect(response.body).to include('commentsLikes')
     end
   end
 end
