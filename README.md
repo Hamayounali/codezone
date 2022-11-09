@@ -17,6 +17,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@hamayounAli6](https://twitter.com/hamayounAli6)
 - LinkedIn: [Humayoon Ali](https://www.linkedin.com/in/humayoon-ali-663ba2239)
 
+👤 Angom Chittaranjan
+
+- GitHub: [@AngomRanjan](https://github.com/AngomRanjan)
+- Twitter: [@RanjanAngom](https://twitter.com/RanjanAngom)
+- LinkedIn: [angom-chittaranjan](https://linkedin.com/in/angom-chittaranjan)
+
 
 ## 🤝 Contributing
 
