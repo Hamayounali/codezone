@@ -2,15 +2,15 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
   before(:each) do
-  @user = User.create(
-    name: 'aaaa', photo: 'https://test.com/test.png',
-    bio: 'This is some test bio data', posts_counter: 0
-  )
-  @post = Post.create(
-    title: 'testing', text: 'Some testing text', comments_counter: 0,
-    likes_counter: 0, author_id: @user.id
-  )
-  @comment = Comment.create(text: ' this is my first commnet', post: @post, author: @user)
+    @user = User.create(
+      name: 'aaaa', photo: 'https://test.com/test.png',
+      bio: 'This is some test bio data', posts_counter: 0
+    )
+    @post = Post.create(
+      title: 'testing', text: 'Some testing text', comments_counter: 0,
+      likes_counter: 0, author_id: @user.id
+    )
+    @comment = Comment.create(text: ' this is my first commnet', post: @post, author: @user)
   end
 
   describe "GET 'index' page" do
