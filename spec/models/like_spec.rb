@@ -13,11 +13,11 @@ RSpec.describe Like, type: :model do
 
   like = Like.create(post:, author: user)
 
-  context 'update_likes_counter' do
-    like.update_likes_counter
+  # context 'update_likes_counter' do
+  #   like.update_likes_counter
 
-    it ' incriment likes_counter' do
-      expect(Post.find(post.id).likes_counter).eql?(post.likes_counter + 1)
-    end
-  end
+  #   it ' incriment likes_counter' do
+  #     expect(Post.find(post.id).likes_counter).eql?(post.likes_counter + 1)
+  #   end
+  # end
 end
