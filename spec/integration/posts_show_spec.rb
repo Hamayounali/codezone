@@ -3,28 +3,23 @@ require 'rails_helper'
 RSpec.describe 'Post show', type: :feature do
   describe 'Post' do
     before(:each) do
-        @user = User.create(
-            name: 'ali', photo: 'https://test.com/test.png',
-            bio: 'This is some test bio data', posts_counter: 0
-          )
-        
-          @post = Post.create(
-            title: 'First Post', text: 'Some testing text', comments_counter: 0,
-            likes_counter: 3, author_id: @user.id
-          )
-    
-          @post = Post.create(
-            title: 'testing', text: 'Some testing text', comments_counter: 0,
-            likes_counter: 0, author_id: @user.id
-          )
-    
-          @post = Post.create(
-            title: 'testing', text: 'Some testing text', comments_counter: 0,
-            likes_counter: 0, author_id: @user.id
-          )
-        
-          @comment = Comment.create(text: 'this is my first commnet', post:@post, author: @user)
-
+      @user = User.create(
+        name: 'ali', photo: 'https://test.com/test.png',
+        bio: 'This is some test bio data', posts_counter: 0
+      )
+      @post = Post.create(
+        title: 'First Post', text: 'Some testing text', comments_counter: 0,
+        likes_counter: 3, author_id: @user.id
+      )
+      @post = Post.create(
+        title: 'testing', text: 'Some testing text', comments_counter: 0,
+        likes_counter: 0, author_id: @user.id
+      )
+      @post = Post.create(
+        title: 'testing', text: 'Some testing text', comments_counter: 0,
+        likes_counter: 0, author_id: @user.id
+      )
+      @comment = Comment.create(text: 'this is my first commnet', post:@post, author: @user)
     end
 
     it 'shows posts title' do
