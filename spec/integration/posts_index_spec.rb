@@ -19,7 +19,7 @@ RSpec.describe 'posts#index', type: :feature do
         title: 'testing', text: 'Some testing text', comments_counter: 0,
         likes_counter: 0, author_id: @user.id
       )
-      @comment = Comment.create(text: 'this is my first commnet', post:@post, author: @user)
+      @comment = Comment.create(text: 'this is my first commnet', post: @post, author: @user)
     end
 
     it "shows user's profile picture" do
