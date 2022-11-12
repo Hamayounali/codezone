@@ -1,6 +1,8 @@
 <div class="container">
 <h3 class="logo"> Codezone
-<span class="homeButton"> <%= link_to "New post", new_post_path %> </span>
+<span class="homeButton"> <%= link_to "New post", new_post_path %> 
+ <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary'%>
+ </span>
 </h3>
 
   <% @users.includes(:posts).each do |user| %>
